@@ -1,0 +1,16 @@
+div {
+    border: 1px solid black;
+}
+h2 {
+    margin-left: 10px;
+}
+a:hover { 
+    color:red;
+}
+html {
+    background: linear-gradient(cyan, blue, #8803fc, #fc03a5)  
+}
+div {
+    background-color: white;
+}
+    

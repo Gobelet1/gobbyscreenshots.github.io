@@ -1,0 +1,37 @@
+div {
+    border: 1px solid black;
+    margin-left: 10px;;
+}
+h2 {
+    margin-left: 5px;
+}
+#Mondstadt {
+    background-color: #58DCB2;
+}
+#Liyue {
+    background-color: #debd6c;
+}
+#Inazuma {
+    background-color: #945dc4;
+}
+#Sumeru {
+    background-color: #608a00;
+}
+#Fontaine {
+    background-color: #00BFFF;
+}
+#Natlan {
+    background-color: #EC4923;
+}
+#Snezhnaya {
+    background-color: #4682B4;
+}
+#Other {
+    background-color: #C0C0C0;
+}
+a:hover { 
+    color:red;
+}
+html {
+    background: linear-gradient(cyan, blue, #8803fc, #fc03a5)  
+}
