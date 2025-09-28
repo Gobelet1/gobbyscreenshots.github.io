@@ -23,6 +23,9 @@ h2 {
 #Natlan {
     background-color: #EC4923;
 }
+#Nod-Krai {
+    background-color: #f21da1;
+}
 #Snezhnaya {
     background-color: #4682B4;
 }
@@ -34,4 +37,5 @@ a:hover {
 }
 html {
     background: linear-gradient(cyan, blue, #8803fc, #fc03a5)  
+
 }
