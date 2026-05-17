@@ -1,41 +1,371 @@
-div {
-    border: 1px solid black;
-    margin-left: 10px;;
+/* !!General CSS!! */
+h3 {
+    margin-left: 50px;
+    color: black;
 }
-h2 {
-    margin-left: 5px;
+h3::after{
+    content: "";
+    display: block;
+    width: calc(100% + 90px);
+    height:1px;
+    margin-top: 1px;
+    margin-left: -90px;
+    background: #000;
 }
-#Mondstadt {
-    background-color: #58DCB2;
+body {
+    background-color: white;
+    margin: 0 100px;
+    padding: 0;
 }
-#Liyue {
-    background-color: #debd6c;
+.content-wrapper {
+    position: relative;
 }
-#Inazuma {
-    background-color: #945dc4;
+/* !!Background Blur Handling!! */
+.img-bleed {
+    position: relative;
+    line-height: 0;
+    margin: 0 101px;
 }
-#Sumeru {
-    background-color: #608a00;
+.img-bleed-outer {
+    overflow: hidden;
+    margin: 0 -101px;
+    position: relative;
 }
-#Fontaine {
-    background-color: #00BFFF;
+.img-bleed::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    background-size: cover;
+    filter: blur(30px);
+    transform: scale(1.4);
+    z-index: 0;
 }
-#Natlan {
-    background-color: #EC4923;
+.img-bleed img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    line-height: 0;
 }
-#Nod-Krai {
-    background-color: #f21da1;
+/* !!Region CSS!! */
+img {
+    width: 100%;
 }
-#Snezhnaya {
-    background-color: #4682B4;
-}
-#Other {
-    background-color: #C0C0C0;
-}
-a:hover { 
-    color:red;
-}
-html {
-    background: linear-gradient(cyan, blue, #8803fc, #fc03a5)  
+/* !Region Outer backgrounds! */
+.region-outer {
+    margin-left: -100px;
+    margin-right: -100px;
 
+    padding-left: 100px;
+    padding-right: 100px;
+
+    overflow: hidden;
+    position: relative;
+}
+/* Default spacing removal */
+.region-outer ul, .region-outer h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.region-outer ul {
+    padding-bottom: 10px;
+}
+/* !Background Gradients! */
+.region-inner {
+    background: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    position: relative;
+    z-index: 1;
+}
+#Mondstadt::before, #Mondstadt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Mondstadt::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #01afa9 60%,
+        #61483a 100%
+    );
+}
+
+/* Right Gradient */
+#Mondstadt::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #03ccc3 70%,
+        #875937 100%
+    );
+}
+#Liyue::before, #Liyue::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Liyue::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #725038 80%,
+        #9ba1d9 100%
+    );
+}
+
+/* Right Gradient */
+#Liyue::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #c48a2a 80%,
+        #64639b 100%
+    );
+}
+#Inazuma::before, #Inazuma::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Inazuma::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #6b656d 90%,
+        #cee8bf 100%
+    );
+}
+
+/* Right Gradient */
+#Inazuma::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #8381a8 90%,
+        #d4decd 100%
+    );
+}
+#Sumeru::before, #Sumeru::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Sumeru::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #679a5a 70%,
+        #5276b5 100%
+    );
+}
+
+/* Right Gradient */
+#Sumeru::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #73a862 70%,
+        #4a75bd 100%
+    );
+}
+#Fontaine::before, #Fontaine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Fontaine::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #e1c5aa 75%,
+        #332b25 100%
+    );
+}
+
+/* Right Gradient */
+#Fontaine::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #afbfdd 75%,
+        #99442d 100%
+    );
+}
+#Natlan::before, #Natlan::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Natlan::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #8d5438 60%,
+        #091339 100%
+    );
+}
+
+/* Right Gradient */
+#Natlan::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #5c3b2d 60%,
+        #11204c 100%
+    );
+}
+#Nod-Krai::before, #Nod-Krai::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Nod-Krai::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #d0d9fc 60%,
+        #3497ce 100%
+    );
+}
+
+/* Right Gradient */
+#Nod-Krai::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #cbd8fb 60%,
+        #32abe8 100%
+    );
+}
+#Snezhnaya::before, #Snezhnaya::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Snezhnaya::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #5db1e4 97%,
+        #261c49 100%
+    );
+}
+
+/* Right Gradient */
+#Snezhnaya::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #60d0f2 97%,
+        #5b59ae 100%
+    );
+}
+#Other::before, #Other::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 0;
+}
+
+/* Left Gradient */
+#Other::before {
+    left: 0;
+    background: linear-gradient(
+        to bottom,
+        #aeadf9 80%,
+        black 100%
+    );
+}
+
+/* Right Gradient */
+#Other::after {
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        #d6dbf8 80%,
+        black 100%
+    );
+}
+/* !Backgrounds! */
+#Mondstadt ul {
+    background-color: rgba(127, 222, 172, 0.3);
+}
+#Liyue ul {
+    background-color: rgba(227, 205, 101, 0.3);
+}
+#Inazuma ul {
+    background-color: rgba(185, 147, 228, 0.3);
+}
+#Sumeru ul {
+    background-color: rgba(181, 221, 71, 0.3);
+}
+#Fontaine ul{
+    background-color: rgba(84, 176, 240, 0.3);
+}
+#Natlan ul{
+    background-color: rgba(231, 157, 109, 0.3);
+}
+#Nod-Krai ul{
+    background-color: rgba(190, 73, 219, 0.3);
+}
+#Snezhnaya ul{
+    background-color: rgba(136, 219, 220, 0.3);
+}
+#Other ul{
+    background-color: rgba(190, 190, 190, 0.3);
+}
+/* !!Link CSS!! */
+a:hover, a:focus { 
+    text-decoration: none;
+    font-style: italic;
+    color: 570000;
+}
+a:visited, a {
+    color: black;
+    text-decoration: none;
 }
